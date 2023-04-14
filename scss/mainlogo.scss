@@ -1,0 +1,56 @@
+.main_logo {
+  height: 80vh;
+  width: 100%;
+  //border: 1px solid blue;
+  @include flexAll;
+  flex-direction: column;
+  .seperator {
+    display: flex;
+
+    transition: 0.5s;
+    img {
+      height: 300px;
+      transform: translateX(-100px);
+      transition: 0.4s;
+    }
+
+    div {
+      h1 {
+        font-family: "Poppins", sans-serif;
+        font-weight: 500;
+        color: #52b69a;
+
+        &:nth-child(2) {
+          font-weight: 800;
+          margin-bottom: 30px;
+          color: #34a0a4;
+          font-size: 5rem;
+        }
+      }
+    }
+  }
+
+  button {
+    background: #94e7c3;
+    padding: 10px 20px;
+    border-radius: 7px;
+    font-size: 1.2rem;
+    border: none;
+    color: #193f58;
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    //outline: 1px solid green;
+    outline-offset: 0px;
+    transition: 0.2s;
+    box-shadow: 0px 5px 0px #193f58, 0px 7px 10px rgb(60, 60, 60);
+
+    transform: perspective(500px) rotateX(20deg);
+    cursor: pointer;
+
+    &:active {
+      margin-top: 5px;
+      box-shadow: 0px 2px 0px #193f58, 0px 4px 10px rgb(60, 60, 60);
+      @include boom;
+    }
+  }
+}

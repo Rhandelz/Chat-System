@@ -1,0 +1,43 @@
+@mixin flexAll {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+//Import Font
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;500;800&display=swap");
+
+//Animati0on
+
+@mixin typing {
+  animation: type 3s ease-in-out;
+  animation-iteration-count: infinite;
+
+  @keyframes type {
+    0% {
+      width: 70px;
+    }
+    50% {
+      width: 0px;
+    }
+    100% {
+      width: 70px;
+    }
+  }
+}
+
+@mixin boom {
+  animation: booms 0.1s 0.1s;
+
+  @keyframes booms {
+    from {
+      outline: 4px solid green;
+      outline-offset: 0px;
+    }
+    to {
+      outline: 4px solid rgba(0, 128, 0, 0);
+      outline-offset: 15px;
+    }
+  }
+}

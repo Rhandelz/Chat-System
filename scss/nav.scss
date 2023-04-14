@@ -1,0 +1,65 @@
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  box-shadow: 1px 0px 5px rgba(0, 0, 0, 0.264);
+  padding: 40px 20px;
+  font-family: "Poppins", sans-serif;
+  transition: 0.5s;
+
+  .burger {
+    background-color: rgb(246, 255, 255);
+    padding: 10px;
+    position: relative;
+    margin-right: 2%;
+
+    .chck {
+      position: absolute;
+      top: -100px;
+
+      &:checked ~ ul {
+        height: 100px;
+      }
+
+      &:checked ~ ul > li {
+        transform: translateX(0px);
+      }
+    }
+
+    label {
+      cursor: pointer;
+
+      &:active i {
+        transform: scale(0.7);
+      }
+      i {
+        transition: 0.5s;
+        font-size: 1.2rem;
+      }
+    }
+
+    ul {
+      position: absolute;
+      transition: 0.2s;
+      list-style: none;
+      top: 100%;
+      height: 0px;
+      gap: 10px;
+      left: 0;
+      @include flexAll;
+      flex-direction: column;
+      overflow: hidden;
+
+      li {
+        transition: 0.5s;
+        transform: translateX(100px);
+        transition-delay: 0.2s;
+      }
+    }
+  }
+}

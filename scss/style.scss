@@ -1,0 +1,22 @@
+@import "./_reset";
+@import "./__var.scss";
+@import "./nav.scss";
+@import "./mainapp.scss";
+@import "./mainlogo.scss";
+
+body {
+  height: 100vh;
+  @include flexAll;
+  font-family: "Poppins" sans-serif;
+  align-items: end;
+  justify-content: left;
+}
+
+.gone {
+  padding: 70px;
+  width: 50%;
+}
+
+#Layer_1 {
+  transform: scale(0);
+}
