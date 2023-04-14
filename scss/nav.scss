@@ -11,6 +11,8 @@ nav {
   padding: 40px 20px;
   font-family: "Poppins", sans-serif;
   transition: 0.5s;
+  z-index: 4;
+  background-color: white;
 
   .burger {
     background-color: rgb(246, 255, 255);

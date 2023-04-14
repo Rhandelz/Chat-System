@@ -4,6 +4,12 @@
   //border: 1px solid blue;
   @include flexAll;
   flex-direction: column;
+
+  @include cp {
+    width: 20%;
+    flex: 1;
+    width: 50%;
+  }
   .seperator {
     display: flex;
 
@@ -12,6 +18,11 @@
       height: 300px;
       transform: translateX(-100px);
       transition: 0.4s;
+
+      @include cp {
+        height: 100px;
+        transform: translateX(0px);
+      }
     }
 
     div {
@@ -25,6 +36,10 @@
           margin-bottom: 30px;
           color: #34a0a4;
           font-size: 5rem;
+
+          @include cp {
+            font-size: 1rem;
+          }
         }
       }
     }
@@ -46,6 +61,10 @@
 
     transform: perspective(500px) rotateX(20deg);
     cursor: pointer;
+
+    @include cp {
+      display: none;
+    }
 
     &:active {
       margin-top: 5px;

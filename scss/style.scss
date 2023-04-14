@@ -10,13 +10,19 @@ body {
   font-family: "Poppins" sans-serif;
   align-items: end;
   justify-content: left;
+
+  @include cp {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    flex: auto;
+    flex-wrap: wrap-reverse;
+    padding-top: 100px;
+  }
 }
 
 .gone {
   padding: 70px;
   width: 50%;
-}
-
-#Layer_1 {
-  transform: scale(0);
 }

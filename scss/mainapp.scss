@@ -11,6 +11,11 @@
   overflow: hidden;
   transition: 0.5s;
 
+  @include cp {
+    //  position: absolute;
+    width: 95vw;
+  }
+
   .chatbox {
     height: 80%;
     // width: 100%;
@@ -34,6 +39,12 @@
       gap: 20px;
       padding: 20px 70px;
 
+      @include cp {
+        width: 100vw;
+        padding: 10px 70px;
+        background-color: white;
+      }
+
       .listC {
         //background: #c7f9cc;
         width: 200px;
@@ -41,6 +52,10 @@
         border-radius: 20px;
         max-width: 200px;
         padding: 10px;
+
+        @include cp {
+          max-width: 500px;
+        }
 
         &:nth-child(even) {
           margin-left: -30px;
@@ -81,7 +96,6 @@
         width: 100%;
         height: 10px;
         background-color: #00ff4c;
-        position: absolute;
       }
     }
   }
