@@ -1,4 +1,4 @@
-import "./scss/style.scss";
+import "/scss/style.scss";
 import { messaged, appending } from "./addAppend";
 
 let msgs = document.getElementById("sms");
