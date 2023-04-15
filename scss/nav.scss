@@ -14,6 +14,14 @@ nav {
   z-index: 4;
   background-color: white;
 
+  h1 {
+    color: #52b69a;
+
+    span {
+      color: rgb(31, 165, 183);
+    }
+  }
+
   .burger {
     background-color: rgb(246, 255, 255);
     padding: 10px;
@@ -25,16 +33,18 @@ nav {
       top: -100px;
 
       &:checked ~ ul {
-        height: 100px;
+        height: 130px;
       }
 
       &:checked ~ ul > li {
         transform: translateX(0px);
+        @include boom;
       }
     }
 
     label {
       cursor: pointer;
+      color: #2d6455;
 
       &:active i {
         transform: scale(0.7);
@@ -50,17 +60,39 @@ nav {
       transition: 0.2s;
       list-style: none;
       top: 100%;
+      width: 100%;
       height: 0px;
+      border-radius: 20px;
       gap: 10px;
       left: 0;
       @include flexAll;
       flex-direction: column;
       overflow: hidden;
 
+      &::after {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        background-color: #feffff;
+        z-index: -1;
+        //filter: blur(20px);
+        box-shadow: 0px 0px 20px rgb(184, 184, 184) inset;
+
+        left: 0;
+      }
+
       li {
         transition: 0.5s;
         transform: translateX(100px);
         transition-delay: 0.2s;
+
+        a {
+          img {
+            height: 20px;
+          }
+        }
       }
     }
   }
